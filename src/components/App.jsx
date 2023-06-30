@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+// import * as yup from 'yup';
 
 import Contacts from './contacts';
 import PhoneBook from './phonebook';
 import Filter from './filter';
+import { save, load } from '../helpers/locale_storage';
 import css from './app.module.css';
 
 export class App extends Component {
@@ -11,6 +13,21 @@ export class App extends Component {
     contacts: [],
     filter: '',
   };
+
+  componentDidMount() {
+    const getContact = load('newContact') || [];
+    if (getContact.length === 0) {
+      return;
+    } else {
+      this.setState({ contacts: getContact });
+    }
+  }
+
+  componentDidUpdate(prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      save('newContact', this.state.contacts);
+    }
+  }
 
   filterByName = e => {
     const { name, value } = e.currentTarget;
