@@ -1,0 +1,17 @@
+.filterLabel {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 15px;
+  color: rgb(69, 67, 219);
+}
+
+.filterInput {
+  display: block;
+  margin-left: 15px;
+  margin-top: 5px;
+  width: 200px;
+  outline: none;
+  border-radius: 8px;
+  background-color: rgb(209, 195, 216);
+}

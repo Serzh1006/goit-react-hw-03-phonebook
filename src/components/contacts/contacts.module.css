@@ -1,0 +1,32 @@
+.contactsList {
+  margin-left: 15px;
+  margin-top: 20px;
+  width: 330px;
+  padding: 5px;
+  list-style: none;
+}
+
+.contactsItem {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(24, 24, 88);
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  height: 30px;
+  border: 2px solid burlywood;
+}
+
+.btnDelete {
+  padding: 5px 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(204, 35, 35, 0.8);
+}
+
+.btnDelete:hover,
+.btnDelete:focus {
+  background-color: brown;
+  cursor: pointer;
+}
